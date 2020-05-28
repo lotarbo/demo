@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('test', function () {
+    $product = \App\Models\Product::whereNotNull('extras')->first();
+    dd($product->extras);
+});

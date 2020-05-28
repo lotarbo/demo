@@ -51,6 +51,16 @@ class ProductCrudController extends CrudController
     {
         CRUD::setValidation(StoreRequest::class);
 
+        CRUD::addField(
+            [
+                'name'  => 'text_text',
+                'label' => 'Test Text',
+                'type'  => 'wysiwyg',
+                'tab'   => 'Test',
+                'fake' => true,
+            ]
+        );
+
         CRUD::addField([ // Text
             'name'  => 'name',
             'label' => 'Name',
